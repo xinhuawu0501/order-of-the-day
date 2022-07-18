@@ -1,0 +1,165 @@
+:root{
+    --note: #ffffffff;
+    --font: rgb(33, 5, 5);
+    --font-inactive: rgb(112, 101, 101);
+    --important: rgb(241, 78, 78);
+
+}
+
+html, body{
+    height: 100%;
+    padding: 0;
+    font-size: 62.5%;
+  
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(243, 247, 247);
+    color: var(--font);
+    font-family: 'Varela Round', sans-serif;
+
+
+}
+
+*,
+*::after,
+*::before{
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.title{
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    font-size: 4rem;
+    margin: 4rem 0;
+  
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    max-width: 50rem;
+    align-items: center;
+    
+
+
+}
+
+.note__input{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 7fr 1fr;
+   
+
+}
+
+.note__input #input-bar{
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 15px;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-right: 10px;
+}
+
+
+  
+.drop-zone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    min-height: 20rem;
+    max-height: 50rem;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--note);
+    box-shadow: -6px 10px 5px rgba(128, 128, 128, 0.09);
+   
+}
+
+.note{
+    display: grid;
+    grid-template-columns: 7.9fr 0.7fr 0.7fr 0.7fr;
+    grid-template-areas: "content checkBox editBtn deleteBtn";
+    width: 100%;
+    padding: 25px 30px;
+    background-color: var(--note);
+    position: relative;
+    border-radius: 10px;
+    align-items: center;
+    justify-items: end;
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+     
+}
+
+.note:hover{
+    /* background-color: rgba(128, 128, 128, 0.1); */
+    filter: brightness(0.9);
+}
+
+.note .note__content{
+    grid-area: content;
+    justify-self: flex-start;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    
+}
+
+.note-done{
+    color: var(--font-inactive);
+    filter: brightness(0.8)
+}
+
+.fa-regular{
+    color: rgb(15, 185, 15);
+}
+
+.fa-xmark{
+    color: red;
+}
+
+.fa-square{
+    color: blueviolet;
+    justify-self: center;
+}
+
+.fa-square-check{
+    color: blueviolet;
+    justify-self: center;
+
+}
+
+#submit{
+    border-radius: 50px;
+    font-size: xx-large;
+    font-weight: 400;
+    color: var(--note);
+    background-color: rgb(60, 44, 233);
+   
+}
+
+@media (max-width: 600px) {
+    .note{
+        padding: 2rem 1.5rem;
+        grid-template-columns: 7fr 1fr 1fr 1fr;
+
+    }
+    
+}
